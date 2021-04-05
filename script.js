@@ -53,6 +53,12 @@ function makeSearch(event) {
       return true;
     }
   });
+
+  cardContainer.innerHTML = '';
+  show(resultArray);
+  searchDescription.innerText = `Displaying ${resultArray.length}/${allEpisodes.length} episodes`;
+
 }
+
 
 

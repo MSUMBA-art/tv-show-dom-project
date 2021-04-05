@@ -1,3 +1,15 @@
 #root {
   color: red;
 }
+
+body {
+  background-color: #B0A8B9;
+
+}
+
+.footer {
+  background-color: darksalmon;
+  font-size:x-large;
+  color: black
+  font-style: italic;
+}
