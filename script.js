@@ -65,16 +65,16 @@
 // }
 
 
-let rootElement = getElement('root');
-let searchBar = getElement('search-bar');
-searchBar.addEventListener('keypress', search);
+// let rootElement = getElement('root');
+// let searchBar = getElement('search-bar');
+// searchBar.addEventListener('keypress', search);
 
-function getElement(name) {
-  return document.getElementById(name);
-}
+// function getElement(name) {
+//   return document.getElementById(name);
+// }
 
-function handleSearch(event) {
-  let filteredEpisodes = search(event.target.value);
-  let resultNode = getElement('result');
-}
-}
+// function handleSearch(event) {
+//   let filteredEpisodes = search(event.target.value);
+//   let resultNode = getElement('result');
+// }
+
