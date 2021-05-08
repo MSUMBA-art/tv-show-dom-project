@@ -78,3 +78,4 @@
 //   let resultNode = getElement('result');
 // }
 
+let
