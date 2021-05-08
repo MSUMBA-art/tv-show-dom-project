@@ -10,21 +10,36 @@
 
   <body>
 
-    
+    <body id="background">
+    <div id="root">
+      <h1 class="title">TV SHOWS</h1>
+      <div class="position">
+        <select id="show">
+          <option>Select A Series</option>
+        </select>
+        <select id="episodes">
+          <option value="all">Select An Episode</option>
+        </select>
 
-    <div id="root"></div>
-    
+        <input
+          id="input"
+          type="search"
+          value=""
+          placeholder="Search a movie here!!">
+        <p id="display" class="side"></p>
+      </div>
 
-     <div class="footer">
-    Data has (originally) come from <a href="https://tvmaze.com/">TVMaze.com</a>
-  </div>
+      <div id="cardContainer"></div>
+    </div>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-  
+    <div>Data originally come from:
+      <a href="https//:tvmaze.com/">TvMaze.com</a>
+    </div>
+    <script src="episodes.js"></script>
 
     <!-- Loads YOUR javascript code -->
     <script src="shows.js"></script>
-    <script src="episodes.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
