@@ -1,4 +1,4 @@
-//You can edit ALL of the code here
+// You can edit ALL of the code here
 // window.onload = setup;
 // const cardContainer = document.getElementById('root');
 // const searchDescription = document.getElementById('searchDescription');
@@ -78,4 +78,99 @@
 //   let resultNode = getElement('result');
 // }
 
-let
+function setup() {
+    getShowData('https://api.tvmaze.com/shows', (allShows) => {
+        appendToOptionShows(allShows)
+        getAllShows(allShows[0].id)
+    })
+}
+
+function getShows(id) {
+    getData(`https://api.tvmaze.com/shows/${id}/episodes`, (allEpisodes) => {
+        makeEpisodesPage(allEpisodes);
+        searchInput(allEpisodes)
+        appendToTheSelect(allEpisodes)
+    })
+}
+
+function createElement(tagName, className, parentElement) {
+    const element = document.createElement(tagName)
+    element.className = className
+    parentElement.appendChild(element)
+    return element
+}
+
+const rootElement = document.getElementById('root');
+const firstDiv = createElement('div', 'navbar', 'rootElem');
+const selectShows = createElement('select', 'shows', 'firstDiv');
+const inputTag = createElement("input", "search-input", firstDiv);
+const pLabelTag = createElement("p", "p-label-tag", firstDiv);
+const secondDiv = createElement("div", "cards row", rootElem);
+rootElem.className = "container";
+inputTag.placeholder = "Search episodes..";
+
+function sortShowsAlphabetical(showsArray) {
+    showsArray.sort(function (a, b){
+        var nameA = a.name.toUpperCase();
+        var nameB = b.name.toUpperCase();
+        if (nameA < nameB) {
+            return -1;
+        }
+        return 0;
+    })
+
+}
+
+function appendToOptionShows(arrayOfShows) {
+    sortShowsAlphabetical(arrayOfShows)
+    arrayOfShows.forEach(show => {
+        let optionTwo = document.createElement('option')
+        optionTwo.text = show.name
+        optionTwo.setAttribute('id', `${show.id}`);
+        selectShows.appendChild(optionTwo)
+        
+    });
+}
+
+selectShows.addEventListener('change', choseShowValue)
+
+function choseShowValue() {
+     const idShow = selectShows.options[selectShows.selectedIndex].id
+    getShows(idShow)
+    console.log(idShow)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.onload = setup;
