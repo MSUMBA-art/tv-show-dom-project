@@ -13,3 +13,68 @@ body {
   color: black;
   font-style: italic;
 } */
+
+body {
+  background-color: rgb(39, 79, 88);
+}
+
+.topBar {
+  background-color: blue;
+  display: flex;
+}
+
+#searchDisplay {
+  color: gray;
+  font-size:1.9rem;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+
+#root {
+  color:  rgb(151, 26, 37);
+  margin: 30px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.myCard{
+  width: 350px;
+  height: 470px;
+  background-color: rgb(177, 154, 241);
+  padding: 10px 5px;
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+  border-radius: 7px;
+  text-align: center;
+}
+
+#searchInput{
+  outline: none;
+  margin-right: 1rem;
+  font-size: 1rem;
+  width: 350px;
+  height: 25px;
+  font-weight: 400px;
+  padding: .375rem .75rem;
+  line-height: 1.1rem;
+  color: #495057;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
+#selectMenu{
+  outline: none;
+  margin-right: 1rem;
+  font-size: 1rem;
+  width: 350px;
+  height: 38px;
+  font-weight: 400px;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+}
